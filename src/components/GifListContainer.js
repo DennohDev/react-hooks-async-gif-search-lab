@@ -4,10 +4,9 @@ import GifSearch from './GifSearch';
 
 const GifListContainer = () => {
   const [gifs, setGifs] = useState([]);
-  const apiKey = '8SP6Arq5276S54XlfO4YhtO0ePFRDePy'; // Replace with your Giphy API key
+  const apiKey = '8SP6Arq5276S54XlfO4YhtO0ePFRDePy'; 
 
   useEffect(() => {
-    // Initial load, fetch some GIFs
     fetchGifs('funny');
   }, []);
 
@@ -17,7 +16,7 @@ const GifListContainer = () => {
     )
       .then((response) => response.json())
       .then((data) => {
-        setGifs(data.data.slice(0, 3)); // Store the first 3 GIFs in state
+        setGifs(data.data.slice(0, 3)); 
       });
   };
 
